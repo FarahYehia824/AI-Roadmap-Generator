@@ -167,7 +167,7 @@ html, body, .stApp {
 
 /* ── Primary button ── */
 .stButton > button[kind="primary"] {
-    background: var(--accent) !important;
+    background: #2563eb !important;
     color: #ffffff !important;
     border: none !important;
     border-radius: 10px !important;
@@ -181,11 +181,11 @@ html, body, .stApp {
     box-shadow: 0 2px 8px rgba(27,58,107,0.18) !important;
 }
 .stButton > button[kind="primary"]:hover {
-    background: var(--accent-dim) !important;
+    background: #1d4ed8 !important;
     transform: translateY(-1px) !important;
     box-shadow: 0 4px 14px rgba(27,58,107,0.25) !important;
 }
-
+            
 /* ── Secondary button ── */
 .stButton > button[kind="secondary"] {
     background: transparent !important;
@@ -242,7 +242,7 @@ html, body, .stApp {
 .stSpinner > div { color: var(--accent) !important; }
 
 /* ── Toggle ── */
-.stToggle label { color: #ffffff !important;}
+.stToggle label { color: #ffffff !important;
 
 /* ── Scrollbar ── */
 ::-webkit-scrollbar { width: 6px; }
