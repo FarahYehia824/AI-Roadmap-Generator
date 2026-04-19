@@ -10,13 +10,12 @@ import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-
 import streamlit as st
 from pipeline.generator import RoadmapPipeline
 
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="RoadmapRAG",
+    page_title="Learning Planner",
     page_icon="🗺️",
     layout="centered",
 )
@@ -24,113 +23,293 @@ st.set_page_config(
 # ── Custom CSS ────────────────────────────────────────────────────────────────
 st.markdown("""
 <style>
-    .main { max-width: 800px; }
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap');
 
-    .hero-title {
-        font-size: 2.8rem;
-        font-weight: 800;
-        text-align: center;
-        background: linear-gradient(135deg, #6366f1, #8b5cf6, #06b6d4);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 0.2rem;
-    }
-    .hero-sub {
-        text-align: center;
-        color: #94a3b8;
-        font-size: 1.05rem;
-        margin-bottom: 2rem;
-    }
-    .track-badge {
-        display: inline-block;
-        background: #1e293b;
-        border: 1px solid #334155;
-        border-radius: 20px;
-        padding: 4px 14px;
-        font-size: 0.82rem;
-        margin: 3px;
-        color: #cbd5e1;
-    }
-    .tip-box {
-        background: #0f172a;
-        border-left: 3px solid #6366f1;
-        border-radius: 6px;
-        padding: 12px 16px;
-        font-size: 0.88rem;
-        color: #94a3b8;
-        margin-top: 1rem;
-    }
+:root {
+    --bg: #f7f8fc;
+    --surface: #eef0f7;
+    --border: #d8dce8;
+    --accent: #1b3a6b;
+    --accent-dim: #142d54;
+    --accent-light: #e8edf7;
+    --text: #0f1c35;
+    --muted: #6b7694;
+    --card: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html, body, .stApp {
+    background: var(--bg) !important;
+    color: var(--text) !important;
+    font-family: 'DM Sans', sans-serif !important;
+}
+
+#MainMenu, footer, header { visibility: hidden; }
+.block-container {
+    max-width: 720px !important;
+    padding: 3rem 1.5rem 4rem !important;
+}
+
+/* ── Hero ── */
+.hero {
+    text-align: center;
+    padding: 3rem 0 2.5rem;
+}
+.hero-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+.hero-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(2.8rem, 6vw, 4.2rem);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--text);
+    margin: 0 0 0.5rem;
+    white-space: nowrap;
+}
+.hero-title em {
+    font-style: italic;
+    color: var(--accent);
+}
+.hero-sub {
+    font-size: 1rem;
+    color: var(--muted);
+    font-weight: 300;
+    margin-top: 0.75rem;
+}
+
+/* ── Tracks ── */
+.tracks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin: 1.5rem 0 2.5rem;
+}
+.track-pill {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 5px 14px;
+    font-size: 0.78rem;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+}
+
+/* ── Divider ── */
+.divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 0 0 2rem;
+}
+
+/* ── Input label ── */
+.input-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+}
+
+/* ── Textarea ── */
+.stTextArea textarea {
+    background: var(--card) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 12px !important;
+    color: var(--text) !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 0.97rem !important;
+    padding: 1rem 1.1rem !important;
+    resize: none !important;
+    transition: border-color 0.2s !important;
+    box-shadow: 0 1px 4px rgba(27,58,107,0.06) !important;
+}
+.stTextArea textarea:focus {
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 0 3px rgba(27,58,107,0.10) !important;
+}
+.stTextArea textarea::placeholder { color: #b0b8cc !important; }
+
+/* ── Selectbox ── */
+.stSelectbox > div > div {
+    background: var(--card) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 10px !important;
+    color: var(--text) !important;
+    font-family: 'DM Sans', sans-serif !important;
+}
+
+/* ── Hint box ── */
+.hint-box {
+    background: var(--accent-light);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 0.83rem;
+    color: var(--muted);
+    margin: 1rem 0 1.5rem;
+    line-height: 1.6;
+}
+.hint-box b { color: var(--text); }
+
+/* ── Primary button ── */
+.stButton > button[kind="primary"] {
+    background: var(--accent) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 10px !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 0.95rem !important;
+    padding: 0.7rem 1.5rem !important;
+    letter-spacing: 0.02em !important;
+    transition: all 0.2s !important;
+    width: 100% !important;
+    box-shadow: 0 2px 8px rgba(27,58,107,0.18) !important;
+}
+.stButton > button[kind="primary"]:hover {
+    background: var(--accent-dim) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 14px rgba(27,58,107,0.25) !important;
+}
+
+/* ── Secondary button ── */
+.stButton > button[kind="secondary"] {
+    background: transparent !important;
+    color: var(--muted) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 10px !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 0.88rem !important;
+    padding: 0.6rem 1rem !important;
+    width: 100% !important;
+}
+.stButton > button[kind="secondary"]:hover {
+    border-color: var(--accent) !important;
+    color: var(--accent) !important;
+}
+
+/* ── Output ── */
+.output-wrapper {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 2rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 12px rgba(27,58,107,0.07);
+}
+.output-wrapper h1, .output-wrapper h2, .output-wrapper h3 {
+    font-family: 'Instrument Serif', serif !important;
+    font-weight: 400 !important;
+    color: var(--text) !important;
+}
+.output-wrapper h2 { color: var(--accent) !important; }
+.output-wrapper hr { border-color: var(--border) !important; margin: 1.5rem 0 !important; }
+.output-wrapper strong { color: var(--text) !important; }
+.output-wrapper a { color: var(--accent) !important; }
+
+/* ── Download button ── */
+.stDownloadButton > button {
+    background: transparent !important;
+    color: var(--accent) !important;
+    border: 1px solid var(--accent) !important;
+    border-radius: 10px !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 0.88rem !important;
+    width: 100% !important;
+}
+
+/* ── Alert / spinner ── */
+.stAlert {
+    background: var(--accent-light) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 10px !important;
+    color: var(--text) !important;
+}
+.stSpinner > div { color: var(--accent) !important; }
+
+/* ── Toggle ── */
+.stToggle label { color: var(--muted) !important; font-size: 0.85rem !important; }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 </style>
 """, unsafe_allow_html=True)
 
 
-# ── Load pipeline (cached — loads once per session) ───────────────────────────
+# ── Load pipeline ─────────────────────────────────────────────────────────────
 @st.cache_resource(show_spinner="Loading AI pipeline...")
 def load_pipeline():
     return RoadmapPipeline()
 
 
 # ── Hero ──────────────────────────────────────────────────────────────────────
-st.markdown('<div class="hero-title">🗺️ RoadmapRAG</div>', unsafe_allow_html=True)
-st.markdown(
-    '<div class="hero-sub">Tell me your learning goal — I\'ll build your personalized roadmap.</div>',
-    unsafe_allow_html=True,
-)
+st.markdown("""
+<div class="hero">
+    <div class="hero-eyebrow">✦ AI-Powered</div>
+    <div class="hero-title">Learning<em>Planner</em></div>
+    <div class="hero-sub">Tell me your learning goal — I'll build your personalized roadmap.</div>
+</div>
+""", unsafe_allow_html=True)
 
-# Tracks badges
 tracks = ["Data Science & ML", "Frontend", "Backend", "DevOps & Cloud", "Android", "Cybersecurity"]
-badges = " ".join(f'<span class="track-badge">{t}</span>' for t in tracks)
-st.markdown(f"<div style='text-align:center;margin-bottom:2rem'>{badges}</div>", unsafe_allow_html=True)
+pills  = " ".join(f'<span class="track-pill">{t}</span>' for t in tracks)
+st.markdown(f'<div class="tracks">{pills}</div>', unsafe_allow_html=True)
+st.markdown('<hr class="divider">', unsafe_allow_html=True)
 
-st.divider()
 
-# ── Input form ────────────────────────────────────────────────────────────────
+# ── Input ─────────────────────────────────────────────────────────────────────
+st.markdown('<div class="input-label">What do you want to learn?</div>', unsafe_allow_html=True)
+
 query = st.text_area(
-    label="Your goal",
+    label="goal",
+    label_visibility="collapsed",
     placeholder=(
         "Tell me about yourself and what you want to learn...\n\n"
         "e.g. I've never coded before and want to become a Data Scientist\n"
         "e.g. I know Python well and want to get into Machine Learning\n"
-        "e.g. I finished a bootcamp and want to learn backend development"
+        "e.g. I finished a bootcamp and want to learn backend development\n"
+        "e.g. أريد تعلم تطوير تطبيقات الأندرويد من الصفر"
     ),
-    label_visibility="collapsed",
-    height=120,
+    height=180,
 )
 
-# Level selector
-st.markdown("**Your experience level:**")
-col_auto, col_beg, col_int, col_adv = st.columns(4)
-
-with col_auto:
-    auto_detect = st.toggle("🤖 Auto-detect", value=True)
-with col_beg:
-    lvl_beg = st.button("🟢 Beginner",      use_container_width=True, disabled=auto_detect)
-with col_int:
-    lvl_int = st.button("🟡 Intermediate",  use_container_width=True, disabled=auto_detect)
-with col_adv:
-    lvl_adv = st.button("🔴 Advanced",      use_container_width=True, disabled=auto_detect)
-
-# Store manual level in session
-if lvl_beg: st.session_state["manual_level"] = "Beginner"
-if lvl_int: st.session_state["manual_level"] = "Intermediate"
-if lvl_adv: st.session_state["manual_level"] = "Advanced"
-
-manual_level = st.session_state.get("manual_level", "Beginner")
-
-
-# Example queries
 st.markdown("""
-<div class="tip-box">
-💡 <b>Try:</b>
-"I want to learn web development" &nbsp;·&nbsp;
-"Help me get into cybersecurity" &nbsp;·&nbsp;
-"I want to become an Android developer"
+<div class="hint-box">
+  <b>💡 Try:</b>
+  "I want to learn web development" · "Help me get into cybersecurity" · "I want to become an Android developer"
 </div>
 """, unsafe_allow_html=True)
 
-st.markdown("<br>", unsafe_allow_html=True)
 
-generate_btn = st.button("🚀 Generate My Roadmap", use_container_width=True, type="primary")
+# ── Level ─────────────────────────────────────────────────────────────────────
+st.markdown('<div class="input-label">Experience level</div>', unsafe_allow_html=True)
+
+auto_detect = st.toggle("🤖 Auto-detect from my description", value=True)
+
+if not auto_detect:
+    level_choice = st.selectbox(
+        label="level",
+        label_visibility="collapsed",
+        options=["Beginner", "Intermediate", "Advanced"],
+    )
+else:
+    level_choice = None
+
+st.markdown("<br>", unsafe_allow_html=True)
+generate_btn = st.button("🚀 Generate My Roadmap", type="primary")
+
 
 # ── Generate ──────────────────────────────────────────────────────────────────
 if generate_btn:
@@ -140,66 +319,57 @@ if generate_btn:
 
     pipeline = load_pipeline()
 
-    st.divider()
-
-    # Stream output into a placeholder
-    with st.spinner("Thinking..."):
-        result = pipeline.retriever.retrieve(query, top_k=5)
+    with st.spinner("Searching knowledge base..."):
+        result  = pipeline.retriever.retrieve(query, top_k=5)
         context = result.as_context_string()
 
-    # Detect or use manual level
-        if auto_detect:
-            from pipeline.generator import detect_level
-            import os
-            from groq import Groq
-            _client = Groq(api_key=os.getenv("OPENAI_API_KEY"))
-            level = detect_level(query, _client)
-            st.info(f"🤖 Detected level: **{level}**")
-        else:
-            level = manual_level
-            st.info(f"📌 Selected level: **{level}**")
+    import os
+    from groq import Groq
+    from pipeline.generator import build_user_prompt, SYSTEM_PROMPT, detect_level
 
-    roadmap_placeholder = st.empty()
-    full_text = ""
+    client = Groq(api_key=os.getenv("OPENAI_API_KEY"))
 
-    with st.spinner(""):
-        from pipeline.generator import build_user_prompt, SYSTEM_PROMPT
-        import os
-        from groq import Groq
+    if auto_detect:
+        with st.spinner("Detecting your level..."):
+            level = detect_level(query, client)
+        st.info(f"🤖 Detected level: **{level}**")
+    else:
+        level = level_choice
+        st.info(f"📌 Selected level: **{level}**")
 
-        client = Groq(api_key=os.getenv("OPENAI_API_KEY"))
-        user_prompt = build_user_prompt(query, context, level)
+    st.markdown('<div class="output-wrapper">', unsafe_allow_html=True)
+    placeholder = st.empty()
+    full_text   = ""
 
-        stream = client.chat.completions.create(
-            model=os.getenv("LLM_MODEL", "llama-3.3-70b-versatile"),
-            messages=[
-                {"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user",   "content": user_prompt},
-            ],
-            max_tokens=int(os.getenv("MAX_TOKENS", 2000)),
-            temperature=0.4,
-            stream=True,
-        )
+    stream = client.chat.completions.create(
+        model=os.getenv("LLM_MODEL", "llama-3.3-70b-versatile"),
+        messages=[
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user",   "content": build_user_prompt(query, context, level)},
+        ],
+        max_tokens=int(os.getenv("MAX_TOKENS", 2000)),
+        temperature=0.4,
+        stream=True,
+    )
 
-        for chunk in stream:
-            delta = chunk.choices[0].delta.content or ""
-            full_text += delta
-            roadmap_placeholder.markdown(full_text + "▌")
+    for chunk in stream:
+        delta     = chunk.choices[0].delta.content or ""
+        full_text += delta
+        placeholder.markdown(full_text + "▌")
 
-        roadmap_placeholder.markdown(full_text)
+    placeholder.markdown(full_text)
+    st.markdown('</div>', unsafe_allow_html=True)
 
-    # ── Actions ───────────────────────────────────────────────────────────────
-    st.divider()
-    col_a, col_b = st.columns(2)
-
-    with col_a:
+    st.markdown("<br>", unsafe_allow_html=True)
+    col1, col2 = st.columns(2)
+    with col1:
         st.download_button(
-            label="⬇️ Download Roadmap",
+            "⬇️ Download Roadmap",
             data=full_text,
             file_name="my_roadmap.md",
             mime="text/markdown",
             use_container_width=True,
         )
-    with col_b:
+    with col2:
         if st.button("🔄 Generate Another", use_container_width=True):
             st.rerun()
