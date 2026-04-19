@@ -292,9 +292,11 @@ st.markdown("""
 # ── Level ─────────────────────────────────────────────────────────────────────
 st.markdown('<div class="section-label">Experience Level</div>', unsafe_allow_html=True)
 
-st.markdown('<p style="color:#ffffff; font-size:0.95rem; margin-bottom:0.3rem;"> Auto-detect from my description</p>', unsafe_allow_html=True)
-auto_detect = st.toggle(" ", value=True)
-
+left, right = st.columns([5, 1])
+with right:
+    auto_detect = st.toggle(" ", value=True)
+with left:
+    st.markdown('<p style="color:#ffffff; font-size:0.95rem; margin-top:0.4rem;">🤖 Auto-detect from my description</p>', unsafe_allow_html=True)
 if not auto_detect:
     level_choice = st.selectbox(
         label="level",
