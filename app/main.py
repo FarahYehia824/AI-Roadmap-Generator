@@ -29,7 +29,7 @@ st.markdown("""
     --bg: #0a0a0f;
     --surface: #111118;
     --border: #1e1e2e;
-    --accent: #c8f135;
+    --accent: #ffffff;
     --accent-dim: #a8cc1a;
     --text: #e8e8f0;
     --muted: #6b6b80;
