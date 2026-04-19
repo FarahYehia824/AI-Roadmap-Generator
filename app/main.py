@@ -330,16 +330,16 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ── Level ─────────────────────────────────────────────────────────────────────
-st.markdown('<div class="section-label">🎯 Experience Level</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-label"> Experience Level</div>', unsafe_allow_html=True)
 
 col_text, col_toggle = st.columns([5, 1])
 with col_text:
     st.markdown("""
     <div class="level-card">
-        <div class="level-card-icon">🤖</div>
+        <div class="level-card-icon"></div>
         <div class="level-card-text">
-            <p>Auto-detect from my description</p>
-            <span class="level-card-sub">Claude will figure out your level automatically</span>
+            <p>Auto-detect from my Description</p>
+            
         </div>
     </div>
     """, unsafe_allow_html=True)
