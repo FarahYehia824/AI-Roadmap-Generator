@@ -121,7 +121,7 @@ html, body, .stApp {
     font-weight: 500;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--muted);
+    color: #ffffff;
     margin-bottom: 0.5rem;
 }
 
@@ -155,15 +155,13 @@ html, body, .stApp {
 
 /* ── Hint box ── */
 .hint-box {
-    background: var(--accent-light);
-    border: 1px solid var(--border);
-    border-left: 3px solid var(--accent);
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-left: 3px solid #ffffff;
     border-radius: 10px;
     padding: 12px 16px;
     font-size: 0.83rem;
-    color: var(--muted);
-    margin: 1rem 0 1.5rem;
-    line-height: 1.6;
+    color: #ffffff;
 }
 .hint-box b { color: var(--text); }
 
@@ -244,7 +242,7 @@ html, body, .stApp {
 .stSpinner > div { color: var(--accent) !important; }
 
 /* ── Toggle ── */
-.stToggle label { color: var(--muted) !important; font-size: 0.85rem !important; }
+.stToggle label { color: #ffffff !important;}
 
 /* ── Scrollbar ── */
 ::-webkit-scrollbar { width: 6px; }
@@ -293,8 +291,8 @@ query = st.text_area(
 
 st.markdown("""
 <div class="hint-box">
-  <b>💡 Try:</b>
-  "I want to learn web development" · "Help me get into cybersecurity" · "I want to become an Android developer"
+  <b>💡 Try Asking:</b>
+  "How do I start coding?" · "Roadmap for AI engineer" · "Learn backend from scratch"
 </div>
 """, unsafe_allow_html=True)
 
