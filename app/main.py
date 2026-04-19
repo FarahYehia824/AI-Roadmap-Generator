@@ -25,16 +25,14 @@ st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap');
 
-:root {
-    --bg: #f7f8fc;
-    --surface: #eef0f7;
-    --border: #d8dce8;
-    --accent: #1b3a6b;
-    --accent-dim: #142d54;
-    --accent-light: #e8edf7;
-    --text: #0f1c35;
-    --muted: #6b7694;
-    --card: #ffffff;
+.track-pill {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 100px;
+    padding: 5px 14px;
+    font-size: 0.78rem;
+    color: #ffffff;
+    letter-spacing: 0.02em;
 }
 
 * { box-sizing: border-box; }
@@ -84,8 +82,9 @@ html, body, .stApp {
     color: var(--accent);
 }
 .hero-sub {
-    font-size: 1rem;
-    color: var(--muted);
+    text-align: center;
+    color: #e0d5c0;
+    font-size: 1.05rem;
     font-weight: 300;
     margin-top: 0.75rem;
 }
@@ -302,7 +301,7 @@ st.markdown("""
 # ── Level ─────────────────────────────────────────────────────────────────────
 st.markdown('<div class="input-label">Experience level</div>', unsafe_allow_html=True)
 
-auto_detect = st.toggle("🤖 Auto-detect from my description", value=True)
+auto_detect = st.toggle(" Auto-detect from my description", value=True)
 
 if not auto_detect:
     level_choice = st.selectbox(
@@ -314,7 +313,7 @@ else:
     level_choice = None
 
 st.markdown("<br>", unsafe_allow_html=True)
-generate_btn = st.button("🚀 Generate My Roadmap", type="primary")
+generate_btn = st.button(" Generate My Roadmap", type="primary")
 
 
 # ── Generate ──────────────────────────────────────────────────────────────────
@@ -338,10 +337,10 @@ if generate_btn:
     if auto_detect:
         with st.spinner("Detecting your level..."):
             level = detect_level(query, client)
-        st.info(f"🤖 Detected level: **{level}**")
+        st.info(f" Detected level: **{level}**")
     else:
         level = level_choice
-        st.info(f"📌 Selected level: **{level}**")
+        st.info(f" Selected level: **{level}**")
 
     st.markdown('<div class="output-wrapper">', unsafe_allow_html=True)
     placeholder = st.empty()
