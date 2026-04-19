@@ -44,7 +44,7 @@ html, body, .stApp {
     color: var(--text) !important;
     font-family: 'DM Sans', sans-serif !important;
     background-image: 
-        linear-gradient(rgba(10,10,15,0.85), rgba(10,10,15,0.95)),
+        linear-gradient(rgba(10,10,15,0.93), rgba(10,10,15,0.98)),
         url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1920&q=80') !important;
     background-size: cover !important;
     background-position: center !important;
