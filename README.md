@@ -21,7 +21,7 @@ RoadmapRAG is a **Retrieval-Augmented Generation (RAG)** system that takes a use
 
 ## 🏗️ Project Structure
 
-\`\`\`
+
 roadmap-rag/
 │
 ├── data/                        # 📦 Knowledge base (JSON files)
@@ -48,13 +48,13 @@ roadmap-rag/
 ├── .env.example                 # Environment variables template
 ├── requirements.txt
 └── README.md
-\`\`\`
+
 
 ---
 
 ## ⚙️ How It Works
 
-\`\`\`
+
 User Input
     │
     ▼
@@ -71,7 +71,7 @@ User Input
     │
     ▼
 Personalized Roadmap ✅
-\`\`\`
+
 
 ---
 
