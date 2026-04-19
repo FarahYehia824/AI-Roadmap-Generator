@@ -12,16 +12,16 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,400&family=Outfit:wght@300;400;500;600&display=swap');
 
 :root {
-    --bg: #0a0a0f;
-    --surface: #111118;
-    --border: rgba(255,255,255,0.15);
-    --accent: #ffffff;
-    --text: #ffffff;
-    --muted: rgba(255,255,255,0.6);
-    --card: rgba(10,10,20,0.75);
+    --bg: #0d1117;
+    --surface: #131a2e;
+    --border: rgba(96,165,250,0.2);
+    --accent: #3b82f6;
+    --text: #f0f4ff;
+    --muted: rgba(220,230,255,0.65);
+    --card: rgba(15,23,42,0.7);
 }
 
 * { box-sizing: border-box; }
@@ -29,9 +29,9 @@ st.markdown("""
 html, body, .stApp {
     background: var(--bg) !important;
     color: var(--text) !important;
-    font-family: 'DM Sans', sans-serif !important;
+    font-family: 'Outfit', sans-serif !important;
     background-image:
-        linear-gradient(rgba(10,10,15,0.68), rgba(10,10,15,0.72)),
+        linear-gradient(135deg, rgba(13,17,23,0.92), rgba(19,26,46,0.95)),
         url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1920&q=80') !important;
     background-size: cover !important;
     background-position: center !important;
@@ -51,27 +51,34 @@ html, body, .stApp {
     padding: 2.5rem 0 1.5rem;
 }
 .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(96,165,250,0.15);
+    border: 1px solid rgba(96,165,250,0.4);
+    border-radius: 100px;
+    padding: 6px 16px;
     font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.22em;
+    font-weight: 600;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.7);
-    margin-bottom: 0.8rem;
+    color: #93c5fd;
+    margin-bottom: 1.1rem;
 }
 .hero-title {
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Playfair Display', serif;
     font-size: clamp(2.6rem, 6vw, 3.8rem);
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.1;
-    color: #ffffff;
+    color: #f0f4ff;
     margin: 0 0 0.6rem;
 }
 .hero-title em {
     font-style: italic;
-    color: rgba(255,255,255,0.85);
+    color: #93c5fd;
 }
 .hero-sub {
-    color: rgba(255,255,255,0.75);
+    color: rgba(220,230,255,0.65);
     font-size: 1rem;
     font-weight: 300;
     margin-top: 0.5rem;
@@ -86,157 +93,188 @@ html, body, .stApp {
     margin: 1.2rem 0 1.8rem;
 }
 .track-pill {
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.28);
+    background: rgba(96,165,250,0.1);
+    border: 1px solid rgba(96,165,250,0.3);
     border-radius: 100px;
-    padding: 5px 14px;
+    padding: 6px 15px;
     font-size: 0.78rem;
-    color: #ffffff;
+    font-weight: 500;
+    color: #bfdbfe;
     letter-spacing: 0.02em;
 }
 
 /* ── Divider ── */
 .divider {
     border: none;
-    border-top: 1px solid rgba(255,255,255,0.12);
+    border-top: 1px solid rgba(96,165,250,0.1);
     margin: 0 0 1.5rem;
 }
 
 /* ── Section label ── */
 .section-label {
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.9);
-    margin-bottom: 0.5rem;
+    color: rgba(220,230,255,0.9);
+    margin-bottom: 0.55rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 /* ── Textarea ── */
 .stTextArea textarea {
-    background: rgba(10,10,20,0.7) !important;
-    border: 1px solid rgba(255,255,255,0.2) !important;
+    background: rgba(15,23,42,0.7) !important;
+    border: 1px solid rgba(96,165,250,0.22) !important;
     border-radius: 12px !important;
-    color: #ffffff !important;
-    font-family: 'DM Sans', sans-serif !important;
-    font-size: 0.95rem !important;
+    color: #e2e8f0 !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 0.93rem !important;
+    font-weight: 300 !important;
     padding: 1rem 1.1rem !important;
     resize: none !important;
     transition: border-color 0.2s !important;
 }
 .stTextArea textarea:focus {
-    border-color: rgba(255,255,255,0.5) !important;
-    box-shadow: 0 0 0 3px rgba(255,255,255,0.06) !important;
+    border-color: rgba(96,165,250,0.5) !important;
+    box-shadow: 0 0 0 3px rgba(96,165,250,0.08) !important;
 }
-.stTextArea textarea::placeholder { color: rgba(255,255,255,0.35) !important; }
+.stTextArea textarea::placeholder { color: rgba(148,163,184,0.5) !important; font-size: 0.88rem !important; }
 
 /* ── Hint box ── */
 .hint-box {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.18);
-    border-left: 3px solid rgba(255,255,255,0.6);
+    background: rgba(96,165,250,0.07);
+    border: 1px solid rgba(96,165,250,0.18);
+    border-left: 3px solid #60a5fa;
     border-radius: 10px;
-    padding: 10px 15px;
-    font-size: 0.82rem;
-    color: rgba(255,255,255,0.8);
-    margin: 0.7rem 0 1.2rem;
+    padding: 10px 14px;
+    font-size: 0.81rem;
+    color: rgba(186,210,255,0.82);
+    margin: 0.65rem 0 1.3rem;
     line-height: 1.5;
 }
-.hint-box b { color: #ffffff; }
+.hint-box b { color: #93c5fd; }
+
+/* ── Level card ── */
+.level-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(15,23,42,0.5);
+    border: 1px solid rgba(96,165,250,0.15);
+    border-radius: 12px;
+    padding: 0.85rem 1.1rem;
+    margin-bottom: 1.3rem;
+}
+.level-card-left { display: flex; align-items: center; gap: 10px; }
+.level-card-icon {
+    width: 34px; height: 34px;
+    border-radius: 8px;
+    background: rgba(96,165,250,0.12);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px;
+}
+.level-card-text p { font-size: 0.88rem; font-weight: 500; color: #e2e8f0; margin: 0 0 2px; }
+.level-card-text small { font-size: 0.74rem; color: rgba(148,163,184,0.7); }
 
 /* ── Toggle ── */
 .stToggle label {
-    color: #ffffff !important;
+    color: #e2e8f0 !important;
     font-size: 0.9rem !important;
 }
 
 /* ── Selectbox ── */
 .stSelectbox > div > div {
-    background: rgba(10,10,20,0.7) !important;
-    border: 1px solid rgba(255,255,255,0.2) !important;
+    background: rgba(15,23,42,0.7) !important;
+    border: 1px solid rgba(96,165,250,0.22) !important;
     border-radius: 10px !important;
-    color: #ffffff !important;
+    color: #e2e8f0 !important;
 }
 
-/* ── Primary button ── */
+/* ── Primary button — واضح من الأول ── */
 .stButton > button[kind="primary"] {
-    background: #2563eb !important;
+    background: #3b82f6 !important;
     color: #ffffff !important;
     border: none !important;
-    border-radius: 10px !important;
-    font-family: 'DM Sans', sans-serif !important;
-    font-weight: 500 !important;
-    font-size: 0.95rem !important;
-    padding: 0.7rem 1.5rem !important;
-    transition: all 0.2s !important;
+    border-radius: 12px !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 0.97rem !important;
+    padding: 0.85rem 1.5rem !important;
     width: 100% !important;
-    box-shadow: 0 2px 12px rgba(37,99,235,0.35) !important;
+    box-shadow: 0 0 0 1px #2563eb, 0 4px 20px rgba(59,130,246,0.5) !important;
+    letter-spacing: 0.02em !important;
+    transition: transform 0.15s !important;
 }
 .stButton > button[kind="primary"]:hover {
-    background: #1d4ed8 !important;
+    background: #3b82f6 !important;
+    box-shadow: 0 0 0 1px #2563eb, 0 4px 20px rgba(59,130,246,0.5) !important;
     transform: translateY(-1px) !important;
-    box-shadow: 0 4px 18px rgba(37,99,235,0.45) !important;
+}
+.stButton > button[kind="primary"]:active {
+    transform: translateY(0) !important;
 }
 
 /* ── Secondary button ── */
 .stButton > button[kind="secondary"] {
-    background: rgba(255,255,255,0.08) !important;
-    color: #ffffff !important;
-    border: 1px solid rgba(255,255,255,0.2) !important;
+    background: rgba(255,255,255,0.07) !important;
+    color: #e2e8f0 !important;
+    border: 1px solid rgba(255,255,255,0.18) !important;
     border-radius: 10px !important;
-    font-family: 'DM Sans', sans-serif !important;
+    font-family: 'Outfit', sans-serif !important;
     font-size: 0.88rem !important;
     width: 100% !important;
 }
 .stButton > button[kind="secondary"]:hover {
-    background: rgba(255,255,255,0.14) !important;
+    background: rgba(255,255,255,0.12) !important;
 }
 
 /* ── Output card ── */
 .output-wrapper {
-    background: rgba(10,10,20,0.82);
-    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(13,17,23,0.85);
+    border: 1px solid rgba(96,165,250,0.15);
     border-radius: 14px;
     padding: 2rem;
     margin-top: 1.2rem;
 }
 .output-wrapper h1, .output-wrapper h2, .output-wrapper h3 {
-    font-family: 'Instrument Serif', serif !important;
-    font-weight: 400 !important;
-    color: #ffffff !important;
+    font-family: 'Playfair Display', serif !important;
+    font-weight: 500 !important;
+    color: #f0f4ff !important;
 }
 .output-wrapper h2 { color: #93c5fd !important; }
-.output-wrapper hr { border-color: rgba(255,255,255,0.1) !important; margin: 1.2rem 0 !important; }
-.output-wrapper strong { color: #ffffff !important; }
+.output-wrapper hr { border-color: rgba(96,165,250,0.1) !important; margin: 1.2rem 0 !important; }
+.output-wrapper strong { color: #f0f4ff !important; }
 .output-wrapper a { color: #93c5fd !important; }
-.output-wrapper p, .output-wrapper li { color: rgba(255,255,255,0.85) !important; }
+.output-wrapper p, .output-wrapper li { color: rgba(220,230,255,0.85) !important; }
 
 /* ── Download button ── */
 .stDownloadButton > button {
     background: transparent !important;
-    color: #ffffff !important;
-    border: 1px solid rgba(255,255,255,0.3) !important;
+    color: #e2e8f0 !important;
+    border: 1px solid rgba(255,255,255,0.25) !important;
     border-radius: 10px !important;
-    font-family: 'DM Sans', sans-serif !important;
+    font-family: 'Outfit', sans-serif !important;
     font-size: 0.88rem !important;
     width: 100% !important;
 }
 .stDownloadButton > button:hover {
-    background: rgba(255,255,255,0.08) !important;
+    background: rgba(255,255,255,0.07) !important;
 }
 
 /* ── Info box ── */
 .stAlert {
-    background: rgba(37,99,235,0.15) !important;
-    border: 1px solid rgba(37,99,235,0.3) !important;
+    background: rgba(59,130,246,0.12) !important;
+    border: 1px solid rgba(59,130,246,0.28) !important;
     border-radius: 10px !important;
-    color: #ffffff !important;
+    color: #bfdbfe !important;
 }
 
 /* ── Scrollbar ── */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: rgba(96,165,250,0.2); border-radius: 3px; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -269,7 +307,7 @@ st.markdown(f'<div class="tracks">{pills}</div>', unsafe_allow_html=True)
 st.markdown('<hr class="divider">', unsafe_allow_html=True)
 
 # ── Input ─────────────────────────────────────────────────────────────────────
-st.markdown('<div class="section-label">What do you want to learn?</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-label">📝 What do you want to learn?</div>', unsafe_allow_html=True)
 
 query = st.text_area(
     label="goal",
@@ -290,13 +328,26 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ── Level ─────────────────────────────────────────────────────────────────────
-st.markdown('<div class="section-label">Experience Level</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-label">🎯 Experience Level</div>', unsafe_allow_html=True)
+
+st.markdown("""
+<div class="level-card">
+    <div class="level-card-left">
+        <div class="level-card-icon">🤖</div>
+        <div class="level-card-text">
+            <p>Auto-detect from my description</p>
+            <small>Claude will figure out your level automatically</small>
+        </div>
+    </div>
+</div>
+""", unsafe_allow_html=True)
 
 left, right = st.columns([5, 1])
 with right:
     auto_detect = st.toggle(" ", value=True)
 with left:
-    st.markdown('<p style="color:#ffffff; font-size:0.95rem; margin-top:0.4rem;">🤖 Auto-detect from my description</p>', unsafe_allow_html=True)
+    st.markdown('<p style="color:rgba(220,230,255,0.75); font-size:0.88rem; margin-top:0.3rem;">Enable auto-detection</p>', unsafe_allow_html=True)
+
 if not auto_detect:
     level_choice = st.selectbox(
         label="level",
