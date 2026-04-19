@@ -44,7 +44,7 @@ html, body, .stApp {
     color: var(--text) !important;
     font-family: 'DM Sans', sans-serif !important;
     background-image: 
-        linear-gradient(rgba(10,10,15,0.93), rgba(10,10,15,0.98)),
+        linear-gradient(rgba(10,10,15,0.65), rgba(10,10,15,0.75)),
         url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1920&q=80') !important;
     background-size: cover !important;
     background-position: center !important;
@@ -75,7 +75,7 @@ html, body, .stApp {
     font-size: clamp(2.8rem, 6vw, 4.2rem);
     font-weight: 400;
     line-height: 1.1;
-    color: var(--text);
+    color: #ffffff;
     margin: 0 0 0.5rem;
     white-space: nowrap;
 }
