@@ -25,14 +25,15 @@ st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap');
 
-.track-pill {
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.25);
-    border-radius: 100px;
-    padding: 5px 14px;
-    font-size: 0.78rem;
-    color: #ffffff;
-    letter-spacing: 0.02em;
+:root {
+    --bg: #0a0a0f;
+    --surface: #111118;
+    --border: #1e1e2e;
+    --accent: #c8f135;
+    --accent-dim: #a8cc1a;
+    --text: #e8e8f0;
+    --muted: #6b6b80;
+    --card: #13131c;
 }
 
 * { box-sizing: border-box; }
@@ -83,7 +84,7 @@ html, body, .stApp {
 }
 .hero-sub {
     text-align: center;
-    color: #e0d5c0;
+    color: #ffffff;
     font-size: 1.05rem;
     font-weight: 300;
     margin-top: 0.75rem;
@@ -98,12 +99,12 @@ html, body, .stApp {
     margin: 1.5rem 0 2.5rem;
 }
 .track-pill {
-    background: var(--card);
-    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
     border-radius: 100px;
     padding: 5px 14px;
     font-size: 0.78rem;
-    color: var(--muted);
+    color: #ffffff;
     letter-spacing: 0.02em;
 }
 
