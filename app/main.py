@@ -31,7 +31,7 @@ html, body, .stApp {
     color: var(--text) !important;
     font-family: 'Outfit', sans-serif !important;
     background-image:
-        linear-gradient(135deg, rgba(13,17,23,0.92), rgba(19,26,46,0.95)),
+        linear-gradient(135deg, rgba(13,17,23,0.65), rgba(19,26,46,0.72)),
         url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1920&q=80') !important;
     background-size: cover !important;
     background-position: center !important;
@@ -282,12 +282,10 @@ html, body, .stApp {
 # ── Pipeline loader ───────────────────────────────────────────────────────────
 @st.cache_resource(show_spinner="Setting up your planner...")
 def load_pipeline():
-    import shutil
     from pathlib import Path
-    if Path("chroma_db").exists():
-        shutil.rmtree("chroma_db")
-    from pipeline.ingest import main as ingest
-    ingest()
+    if not Path("faiss_store").exists():
+        from pipeline.ingest import main as ingest
+        ingest()
     from pipeline.generator import RoadmapPipeline
     return RoadmapPipeline()
 
@@ -307,7 +305,7 @@ st.markdown(f'<div class="tracks">{pills}</div>', unsafe_allow_html=True)
 st.markdown('<hr class="divider">', unsafe_allow_html=True)
 
 # ── Input ─────────────────────────────────────────────────────────────────────
-st.markdown('<div class="section-label">📝 What do you want to learn?</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-label"> What do you want to learn?</div>', unsafe_allow_html=True)
 
 query = st.text_area(
     label="goal",
@@ -328,15 +326,15 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ── Level ─────────────────────────────────────────────────────────────────────
-st.markdown('<div class="section-label">🎯 Experience Level</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-label"> Experience Level</div>', unsafe_allow_html=True)
 
 st.markdown("""
 <div class="level-card">
     <div class="level-card-left">
-        <div class="level-card-icon">🤖</div>
+        <div class="level-card-icon"></div>
         <div class="level-card-text">
-            <p>Auto-detect from my description</p>
-            <small>Claude will figure out your level automatically</small>
+            <p>Auto-detect from my Description</p>
+            
         </div>
     </div>
 </div>
@@ -381,10 +379,10 @@ if generate_btn:
     if auto_detect:
         with st.spinner("Understanding your level..."):
             level = detect_level(query, client)
-        st.info(f"🤖 Detected level: **{level}**")
+        st.info(f" Detected level: **{level}**")
     else:
         level = level_choice
-        st.info(f"📌 Level: **{level}**")
+        st.info(f" Level: **{level}**")
 
     st.markdown('<div class="output-wrapper">', unsafe_allow_html=True)
     placeholder = st.empty()
