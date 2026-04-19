@@ -330,21 +330,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ── Level ─────────────────────────────────────────────────────────────────────
-st.markdown('<div class="section-label"> Experience Level</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-label">🎯 Experience Level</div>', unsafe_allow_html=True)
 
-col_text, col_toggle = st.columns([5, 1])
-with col_text:
-    st.markdown("""
-    <div class="level-card">
-        <div class="level-card-icon"></div>
-        <div class="level-card-text">
-            <p>Auto-detect from my Description</p>
-            
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-with col_toggle:
-    auto_detect = st.toggle(" ", value=True, label_visibility="collapsed")
+auto_detect = st.toggle("🤖 Auto-detect from my description", value=True)
 
 if not auto_detect:
     level_choice = st.selectbox(
