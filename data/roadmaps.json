@@ -1,0 +1,473 @@
+[
+  {
+    "id": "rm_001",
+    "track": "Data Science & ML",
+    "goal": "Become a Data Scientist / ML Engineer",
+    "description": "A comprehensive path from Python basics to deploying production ML models and working with LLMs.",
+    "total_duration_weeks": 32,
+    "difficulty": "Intermediate to Advanced",
+    "career_outcomes": ["Data Scientist", "ML Engineer", "AI Researcher", "Data Analyst"],
+    "steps": [
+      {
+        "order": 1,
+        "skill_id": "sk_001",
+        "title": "Learn Python Programming",
+        "why": "Python is the primary language for data science, ML, and AI. Every tool in this track is Python-based.",
+        "duration_weeks": 4,
+        "level": "Beginner",
+        "milestone": "Build a small automation script or data parser"
+      },
+      {
+        "order": 2,
+        "skill_id": "sk_002",
+        "title": "Master Mathematics & Statistics",
+        "why": "ML algorithms are built on math. Understanding the theory helps you choose the right model and debug issues.",
+        "duration_weeks": 5,
+        "level": "Beginner",
+        "milestone": "Solve probability problems and implement basic stats from scratch"
+      },
+      {
+        "order": 3,
+        "skill_id": "sk_013",
+        "title": "Learn Git & GitHub",
+        "why": "Essential for tracking experiments, collaborating, and showcasing your projects to employers.",
+        "duration_weeks": 1,
+        "level": "Beginner",
+        "milestone": "Push your first project to GitHub"
+      },
+      {
+        "order": 4,
+        "skill_id": "sk_003",
+        "title": "Data Manipulation with Pandas & NumPy",
+        "why": "Real-world data is messy. You need to clean, transform, and explore data before any modeling.",
+        "duration_weeks": 3,
+        "level": "Beginner",
+        "milestone": "Complete an EDA (Exploratory Data Analysis) on a Kaggle dataset"
+      },
+      {
+        "order": 5,
+        "skill_id": "sk_004",
+        "title": "Data Visualization",
+        "why": "Communicating insights visually is as important as finding them. Stakeholders need clear charts, not raw numbers.",
+        "duration_weeks": 2,
+        "level": "Beginner",
+        "milestone": "Build a dashboard with 5+ different chart types"
+      },
+      {
+        "order": 6,
+        "skill_id": "sk_016",
+        "title": "Databases: SQL & NoSQL",
+        "why": "Data scientists frequently query databases. SQL is a non-negotiable skill in any data role.",
+        "duration_weeks": 3,
+        "level": "Beginner",
+        "milestone": "Write complex SQL queries with JOINs, CTEs, and window functions"
+      },
+      {
+        "order": 7,
+        "skill_id": "sk_005",
+        "title": "Machine Learning Fundamentals",
+        "why": "The core of the track. Learn how models learn from data and how to evaluate them properly.",
+        "duration_weeks": 6,
+        "level": "Intermediate",
+        "milestone": "Build and evaluate 3 different ML models on a real dataset"
+      },
+      {
+        "order": 8,
+        "skill_id": "sk_006",
+        "title": "Deep Learning & Neural Networks",
+        "why": "Powers computer vision, NLP, and generative AI. Required for any advanced AI role.",
+        "duration_weeks": 6,
+        "level": "Intermediate",
+        "milestone": "Train an image classifier and an LSTM for sequence prediction"
+      },
+      {
+        "order": 9,
+        "skill_id": "sk_007",
+        "title": "Natural Language Processing (NLP)",
+        "why": "NLP and LLMs are the hottest area in AI right now. RAG, chatbots, and AI assistants all rely on this.",
+        "duration_weeks": 5,
+        "level": "Advanced",
+        "milestone": "Build a semantic search engine or fine-tune a BERT model"
+      },
+      {
+        "order": 10,
+        "skill_id": "sk_008",
+        "title": "MLOps & Model Deployment",
+        "why": "A model in a notebook is worthless. Learn to ship models to production and monitor them.",
+        "duration_weeks": 4,
+        "level": "Advanced",
+        "milestone": "Deploy an ML model as a REST API using FastAPI + Docker"
+      }
+    ]
+  },
+  {
+    "id": "rm_002",
+    "track": "Frontend",
+    "goal": "Become a Frontend Developer",
+    "description": "Go from zero to building professional, responsive, and performant web applications using modern tools.",
+    "total_duration_weeks": 24,
+    "difficulty": "Beginner to Intermediate",
+    "career_outcomes": ["Frontend Developer", "UI Engineer", "React Developer", "Full Stack Developer"],
+    "steps": [
+      {
+        "order": 1,
+        "skill_id": "sk_009",
+        "title": "Learn HTML & CSS",
+        "why": "The building blocks of the web. Every website is HTML for structure and CSS for style.",
+        "duration_weeks": 3,
+        "level": "Beginner",
+        "milestone": "Clone a real website layout using only HTML & CSS"
+      },
+      {
+        "order": 2,
+        "skill_id": "sk_013",
+        "title": "Learn Git & GitHub",
+        "why": "You'll use Git every single day as a developer. Start early to build the habit.",
+        "duration_weeks": 1,
+        "level": "Beginner",
+        "milestone": "Host your HTML project on GitHub Pages"
+      },
+      {
+        "order": 3,
+        "skill_id": "sk_010",
+        "title": "JavaScript Fundamentals",
+        "why": "JS makes websites interactive. It's the only programming language that runs natively in browsers.",
+        "duration_weeks": 6,
+        "level": "Beginner",
+        "milestone": "Build a to-do app with full CRUD operations"
+      },
+      {
+        "order": 4,
+        "skill_id": "sk_012",
+        "title": "TypeScript",
+        "why": "TypeScript catches bugs before runtime. Almost all modern React projects use TypeScript.",
+        "duration_weeks": 2,
+        "level": "Intermediate",
+        "milestone": "Convert a JavaScript project to TypeScript"
+      },
+      {
+        "order": 5,
+        "skill_id": "sk_011",
+        "title": "React.js",
+        "why": "The most in-demand frontend framework. Used by Facebook, Airbnb, Netflix, and thousands of startups.",
+        "duration_weeks": 7,
+        "level": "Intermediate",
+        "milestone": "Build a full CRUD app with React Router and state management"
+      },
+      {
+        "order": 6,
+        "skill_id": "sk_014",
+        "title": "Frontend Performance & Testing",
+        "why": "Employers expect optimized, tested code. Performance and testing skills separate junior from senior devs.",
+        "duration_weeks": 3,
+        "level": "Advanced",
+        "milestone": "Achieve 90+ Lighthouse score and write unit + E2E tests"
+      }
+    ]
+  },
+  {
+    "id": "rm_003",
+    "track": "Backend",
+    "goal": "Become a Backend Developer",
+    "description": "Build robust, scalable server-side applications and APIs that power modern web and mobile apps.",
+    "total_duration_weeks": 26,
+    "difficulty": "Intermediate",
+    "career_outcomes": ["Backend Developer", "API Engineer", "Software Engineer", "Full Stack Developer"],
+    "steps": [
+      {
+        "order": 1,
+        "skill_id": "sk_001",
+        "title": "Learn Python Programming",
+        "why": "Python is widely used for backend development and has excellent libraries for building APIs and services.",
+        "duration_weeks": 4,
+        "level": "Beginner",
+        "milestone": "Build CLI tools and basic scripts in Python"
+      },
+      {
+        "order": 2,
+        "skill_id": "sk_013",
+        "title": "Learn Git & GitHub",
+        "why": "Version control is mandatory in any professional development environment.",
+        "duration_weeks": 1,
+        "level": "Beginner",
+        "milestone": "Collaborate on a repo using branches and pull requests"
+      },
+      {
+        "order": 3,
+        "skill_id": "sk_019",
+        "title": "Linux & Command Line",
+        "why": "Backend servers run on Linux. You need to be comfortable in a terminal environment.",
+        "duration_weeks": 2,
+        "level": "Beginner",
+        "milestone": "Write shell scripts to automate file management tasks"
+      },
+      {
+        "order": 4,
+        "skill_id": "sk_016",
+        "title": "Databases: SQL & NoSQL",
+        "why": "Every backend application stores data. Knowing how to design and query databases is fundamental.",
+        "duration_weeks": 4,
+        "level": "Beginner",
+        "milestone": "Design a relational schema and build queries with JOINs and transactions"
+      },
+      {
+        "order": 5,
+        "skill_id": "sk_015",
+        "title": "Backend Development with FastAPI",
+        "why": "FastAPI is modern, fast, and production-ready. It auto-generates API docs and enforces validation.",
+        "duration_weeks": 5,
+        "level": "Intermediate",
+        "milestone": "Build a fully documented REST API with CRUD and authentication"
+      },
+      {
+        "order": 6,
+        "skill_id": "sk_017",
+        "title": "Authentication & Security Basics",
+        "why": "Insecure APIs are a major liability. Every backend developer must understand auth and security.",
+        "duration_weeks": 2,
+        "level": "Intermediate",
+        "milestone": "Add JWT-based auth and role-based access control to your API"
+      },
+      {
+        "order": 7,
+        "skill_id": "sk_020",
+        "title": "Docker & Containerization",
+        "why": "Docker ensures your app runs the same everywhere. It's the standard for shipping backend services.",
+        "duration_weeks": 3,
+        "level": "Intermediate",
+        "milestone": "Dockerize your FastAPI app and run it with Docker Compose"
+      },
+      {
+        "order": 8,
+        "skill_id": "sk_018",
+        "title": "System Design",
+        "why": "Senior backend roles require designing for scale. Understanding caching, queues, and microservices is key.",
+        "duration_weeks": 4,
+        "level": "Advanced",
+        "milestone": "Design and present architecture for a scalable e-commerce backend"
+      }
+    ]
+  },
+  {
+    "id": "rm_004",
+    "track": "DevOps & Cloud",
+    "goal": "Become a DevOps / Cloud Engineer",
+    "description": "Automate software delivery, manage cloud infrastructure, and ensure reliable, scalable systems.",
+    "total_duration_weeks": 28,
+    "difficulty": "Intermediate to Advanced",
+    "career_outcomes": ["DevOps Engineer", "Cloud Engineer", "SRE", "Platform Engineer", "Infrastructure Engineer"],
+    "steps": [
+      {
+        "order": 1,
+        "skill_id": "sk_019",
+        "title": "Linux & Command Line",
+        "why": "All cloud servers run Linux. This is the most fundamental skill for any DevOps engineer.",
+        "duration_weeks": 3,
+        "level": "Beginner",
+        "milestone": "Administer a Linux server: users, permissions, networking, cron jobs"
+      },
+      {
+        "order": 2,
+        "skill_id": "sk_013",
+        "title": "Learn Git & GitHub",
+        "why": "DevOps is about automating developer workflows. Git is at the center of every pipeline.",
+        "duration_weeks": 1,
+        "level": "Beginner",
+        "milestone": "Manage a repo with branching strategy and protected main branch"
+      },
+      {
+        "order": 3,
+        "skill_id": "sk_029",
+        "title": "Networking Fundamentals",
+        "why": "Understanding how networks work is critical for configuring cloud VPCs, load balancers, and firewalls.",
+        "duration_weeks": 3,
+        "level": "Beginner",
+        "milestone": "Analyze network traffic with Wireshark and configure basic firewall rules"
+      },
+      {
+        "order": 4,
+        "skill_id": "sk_020",
+        "title": "Docker & Containerization",
+        "why": "Containers are the foundation of modern DevOps. Everything runs in containers today.",
+        "duration_weeks": 4,
+        "level": "Intermediate",
+        "milestone": "Containerize a multi-service app with Docker Compose"
+      },
+      {
+        "order": 5,
+        "skill_id": "sk_021",
+        "title": "CI/CD Pipelines",
+        "why": "Automating build, test, and deploy cycles is the core value proposition of DevOps.",
+        "duration_weeks": 4,
+        "level": "Intermediate",
+        "milestone": "Build a full CI/CD pipeline with GitHub Actions that tests and deploys to a server"
+      },
+      {
+        "order": 6,
+        "skill_id": "sk_022",
+        "title": "Cloud Platforms (AWS / GCP / Azure)",
+        "why": "Cloud is where all modern infrastructure lives. AWS is the market leader with the most job demand.",
+        "duration_weeks": 7,
+        "level": "Intermediate",
+        "milestone": "Deploy a containerized app on AWS with EC2, RDS, and S3. Get AWS CCP certified."
+      },
+      {
+        "order": 7,
+        "skill_id": "sk_023",
+        "title": "Infrastructure as Code (Terraform)",
+        "why": "Manually clicking in cloud consoles is error-prone. IaC lets you version and automate your infrastructure.",
+        "duration_weeks": 4,
+        "level": "Advanced",
+        "milestone": "Provision a full AWS environment (VPC, EC2, RDS) with Terraform"
+      }
+    ]
+  },
+  {
+    "id": "rm_005",
+    "track": "Android / Mobile",
+    "goal": "Become an Android Developer",
+    "description": "Build and ship professional Android applications using Kotlin and modern Jetpack libraries.",
+    "total_duration_weeks": 24,
+    "difficulty": "Beginner to Intermediate",
+    "career_outcomes": ["Android Developer", "Mobile Engineer", "Kotlin Developer"],
+    "steps": [
+      {
+        "order": 1,
+        "skill_id": "sk_024",
+        "title": "Learn Kotlin for Android",
+        "why": "Kotlin is Google's official Android language. Modern Android development is 100% Kotlin.",
+        "duration_weeks": 4,
+        "level": "Beginner",
+        "milestone": "Write Kotlin programs using coroutines, data classes, and extension functions"
+      },
+      {
+        "order": 2,
+        "skill_id": "sk_013",
+        "title": "Learn Git & GitHub",
+        "why": "Essential for tracking your app versions and collaborating with teams.",
+        "duration_weeks": 1,
+        "level": "Beginner",
+        "milestone": "Set up a GitHub repo for your Android project"
+      },
+      {
+        "order": 3,
+        "skill_id": "sk_025",
+        "title": "Android UI with Jetpack Compose",
+        "why": "Compose is the modern, declarative way to build Android UIs. Google recommends it for all new projects.",
+        "duration_weeks": 5,
+        "level": "Intermediate",
+        "milestone": "Build a multi-screen app with Compose navigation and animations"
+      },
+      {
+        "order": 4,
+        "skill_id": "sk_026",
+        "title": "Android Architecture (MVVM)",
+        "why": "Professional apps use clean architecture. MVVM with ViewModel and Room is the industry standard.",
+        "duration_weeks": 5,
+        "level": "Intermediate",
+        "milestone": "Build a notes app with Room database and ViewModel following MVVM"
+      },
+      {
+        "order": 5,
+        "skill_id": "sk_027",
+        "title": "Networking & APIs in Android",
+        "why": "Real apps consume APIs. Retrofit with Coroutines is the standard for Android networking.",
+        "duration_weeks": 3,
+        "level": "Intermediate",
+        "milestone": "Build an app that fetches data from a public API and displays it offline-first"
+      },
+      {
+        "order": 6,
+        "skill_id": "sk_028",
+        "title": "Publishing to Google Play",
+        "why": "Shipping is a skill. Understanding the release process is required to be a professional developer.",
+        "duration_weeks": 1,
+        "level": "Advanced",
+        "milestone": "Publish your first app to the Google Play Store (even a simple one)"
+      }
+    ]
+  },
+  {
+    "id": "rm_006",
+    "track": "Cybersecurity",
+    "goal": "Become a Cybersecurity Professional",
+    "description": "Learn to think like an attacker and defend systems. Go from networking basics to ethical hacking and SOC operations.",
+    "total_duration_weeks": 30,
+    "difficulty": "Intermediate to Advanced",
+    "career_outcomes": ["Penetration Tester", "Security Analyst", "SOC Analyst", "Security Engineer"],
+    "steps": [
+      {
+        "order": 1,
+        "skill_id": "sk_019",
+        "title": "Linux & Command Line",
+        "why": "Kali Linux and most security tools run on Linux. Comfort with the terminal is non-negotiable.",
+        "duration_weeks": 3,
+        "level": "Beginner",
+        "milestone": "Use Linux commands confidently for file ops, networking, and process management"
+      },
+      {
+        "order": 2,
+        "skill_id": "sk_029",
+        "title": "Networking Fundamentals",
+        "why": "You can't attack or defend what you don't understand. Networking is the foundation of cybersecurity.",
+        "duration_weeks": 4,
+        "level": "Beginner",
+        "milestone": "Set up a home lab, capture and analyze packets with Wireshark"
+      },
+      {
+        "order": 3,
+        "skill_id": "sk_001",
+        "title": "Python for Security Scripting",
+        "why": "Security professionals script their own tools: scanners, exploits, and automation scripts.",
+        "duration_weeks": 3,
+        "level": "Beginner",
+        "milestone": "Write a port scanner and a basic network sniffer in Python"
+      },
+      {
+        "order": 4,
+        "skill_id": "sk_013",
+        "title": "Learn Git & GitHub",
+        "why": "Storing and sharing your security tools, CTF writeups, and scripts professionally.",
+        "duration_weeks": 1,
+        "level": "Beginner",
+        "milestone": "Publish your security scripts to a GitHub portfolio"
+      },
+      {
+        "order": 5,
+        "skill_id": "sk_032",
+        "title": "Cryptography & PKI",
+        "why": "Encryption is everywhere in security. Understanding TLS, hashing, and certificates is essential.",
+        "duration_weeks": 3,
+        "level": "Intermediate",
+        "milestone": "Implement common cryptographic algorithms and break weak ones in CTF challenges"
+      },
+      {
+        "order": 6,
+        "skill_id": "sk_030",
+        "title": "Ethical Hacking & Penetration Testing",
+        "why": "Understanding attack techniques is required to build effective defenses. Think like the adversary.",
+        "duration_weeks": 7,
+        "level": "Intermediate",
+        "milestone": "Complete 10 HackTheBox machines and document your methodology"
+      },
+      {
+        "order": 7,
+        "skill_id": "sk_031",
+        "title": "Web Application Security",
+        "why": "Most modern attacks target web apps. OWASP Top 10 knowledge is required for any security role.",
+        "duration_weeks": 5,
+        "level": "Intermediate",
+        "milestone": "Complete OWASP WebGoat and find vulnerabilities in a test app with Burp Suite"
+      },
+      {
+        "order": 8,
+        "skill_id": "sk_033",
+        "title": "Security Operations & Incident Response",
+        "why": "SOC and IR skills are in massive demand. Blue team skills complement offensive knowledge.",
+        "duration_weeks": 5,
+        "level": "Advanced",
+        "milestone": "Set up a SIEM, create detection rules, and simulate an incident response"
+      }
+    ]
+  }
+]

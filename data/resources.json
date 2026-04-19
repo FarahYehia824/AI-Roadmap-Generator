@@ -1,0 +1,1064 @@
+[
+  {
+    "skill_id": "sk_001",
+    "skill_name": "Python Programming",
+    "resources": [
+      {
+        "title": "Python for Everybody Specialization",
+        "platform": "Coursera",
+        "instructor": "Dr. Chuck Severance",
+        "type": "course",
+        "level": "Beginner",
+        "free": false,
+        "audit_available": true,
+        "duration_hours": 32,
+        "link": "https://www.coursera.org/specializations/python",
+        "why_recommended": "Best structured beginner Python course. Covers everything from scratch with great exercises."
+      },
+      {
+        "title": "Automate the Boring Stuff with Python",
+        "platform": "Free Book / Udemy",
+        "instructor": "Al Sweigart",
+        "type": "book + course",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 20,
+        "link": "https://automatetheboringstuff.com",
+        "why_recommended": "Practical and project-based. Free online. Great for learning by doing."
+      },
+      {
+        "title": "Python Crash Course",
+        "platform": "Book",
+        "instructor": "Eric Matthes",
+        "type": "book",
+        "level": "Beginner",
+        "free": false,
+        "audit_available": false,
+        "duration_hours": 25,
+        "link": "https://nostarch.com/python-crash-course-3rd-edition",
+        "why_recommended": "Best Python book for beginners. Clean explanations and real projects."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_002",
+    "skill_name": "Mathematics & Statistics",
+    "resources": [
+      {
+        "title": "Mathematics for Machine Learning Specialization",
+        "platform": "Coursera",
+        "instructor": "Imperial College London",
+        "type": "course",
+        "level": "Beginner",
+        "free": false,
+        "audit_available": true,
+        "duration_hours": 45,
+        "link": "https://www.coursera.org/specializations/mathematics-machine-learning",
+        "why_recommended": "Covers all the math you need for ML: linear algebra, calculus, and statistics."
+      },
+      {
+        "title": "StatQuest with Josh Starmer",
+        "platform": "YouTube",
+        "instructor": "Josh Starmer",
+        "type": "video series",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 30,
+        "link": "https://www.youtube.com/@statquest",
+        "why_recommended": "Best free resource for statistics and ML math. Crystal clear explanations."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_003",
+    "skill_name": "Data Manipulation with Pandas & NumPy",
+    "resources": [
+      {
+        "title": "Pandas Documentation - Getting Started Tutorials",
+        "platform": "Official Docs",
+        "instructor": "Pandas Team",
+        "type": "documentation",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 10,
+        "link": "https://pandas.pydata.org/docs/getting_started/index.html",
+        "why_recommended": "Official and always up-to-date. Best first reference for pandas."
+      },
+      {
+        "title": "Data Analysis with Python - freeCodeCamp",
+        "platform": "freeCodeCamp / Coursera",
+        "instructor": "Santiago Basulto",
+        "type": "course",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 20,
+        "link": "https://www.freecodecamp.org/learn/data-analysis-with-python/",
+        "why_recommended": "Hands-on and completely free. Covers NumPy, Pandas, and Matplotlib."
+      },
+      {
+        "title": "Kaggle Pandas Course",
+        "platform": "Kaggle",
+        "instructor": "Kaggle Team",
+        "type": "micro-course",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 4,
+        "link": "https://www.kaggle.com/learn/pandas",
+        "why_recommended": "Quick, interactive, and practical. Great for getting up to speed fast."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_004",
+    "skill_name": "Data Visualization",
+    "resources": [
+      {
+        "title": "Data Visualization with Python - Kaggle",
+        "platform": "Kaggle",
+        "instructor": "Kaggle Team",
+        "type": "micro-course",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 4,
+        "link": "https://www.kaggle.com/learn/data-visualization",
+        "why_recommended": "Hands-on notebooks covering Seaborn and Matplotlib with real datasets."
+      },
+      {
+        "title": "Plotly & Dash for Python - Udemy",
+        "platform": "Udemy",
+        "instructor": "Jose Portilla",
+        "type": "course",
+        "level": "Intermediate",
+        "free": false,
+        "audit_available": false,
+        "duration_hours": 15,
+        "link": "https://www.udemy.com/course/interactive-python-dashboards-with-plotly-and-dash/",
+        "why_recommended": "Best course for building interactive dashboards with Plotly and Dash."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_005",
+    "skill_name": "Machine Learning Fundamentals",
+    "resources": [
+      {
+        "title": "Machine Learning Specialization",
+        "platform": "Coursera",
+        "instructor": "Andrew Ng (Stanford / DeepLearning.AI)",
+        "type": "course",
+        "level": "Intermediate",
+        "free": false,
+        "audit_available": true,
+        "duration_hours": 60,
+        "link": "https://www.coursera.org/specializations/machine-learning-introduction",
+        "why_recommended": "The gold standard ML course. Andrew Ng explains concepts better than anyone."
+      },
+      {
+        "title": "Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow",
+        "platform": "Book",
+        "instructor": "Aur\u00e9lien G\u00e9ron",
+        "type": "book",
+        "level": "Intermediate",
+        "free": false,
+        "audit_available": false,
+        "duration_hours": 50,
+        "link": "https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/",
+        "why_recommended": "The most practical ML book. Code-first approach with real projects."
+      },
+      {
+        "title": "Kaggle ML Courses",
+        "platform": "Kaggle",
+        "instructor": "Kaggle Team",
+        "type": "micro-course",
+        "level": "Intermediate",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 12,
+        "link": "https://www.kaggle.com/learn",
+        "why_recommended": "Free, fast, practical. Great supplement to longer courses."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_006",
+    "skill_name": "Deep Learning & Neural Networks",
+    "resources": [
+      {
+        "title": "Deep Learning Specialization",
+        "platform": "Coursera",
+        "instructor": "Andrew Ng (DeepLearning.AI)",
+        "type": "course",
+        "level": "Intermediate",
+        "free": false,
+        "audit_available": true,
+        "duration_hours": 80,
+        "link": "https://www.coursera.org/specializations/deep-learning",
+        "why_recommended": "The definitive deep learning course. Builds from scratch to CNNs, RNNs, and Transformers."
+      },
+      {
+        "title": "Fast.ai - Practical Deep Learning for Coders",
+        "platform": "fast.ai",
+        "instructor": "Jeremy Howard",
+        "type": "course",
+        "level": "Intermediate",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 30,
+        "link": "https://course.fast.ai",
+        "why_recommended": "Top-down, practical approach. Get state-of-the-art results quickly, then learn the theory."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_007",
+    "skill_name": "Natural Language Processing (NLP)",
+    "resources": [
+      {
+        "title": "NLP with HuggingFace Transformers",
+        "platform": "HuggingFace",
+        "instructor": "HuggingFace Team",
+        "type": "course",
+        "level": "Intermediate",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 35,
+        "link": "https://huggingface.co/learn/nlp-course/chapter1/1",
+        "why_recommended": "Official course from the creators of the most used NLP library. Covers BERT, GPT, RAG, and more."
+      },
+      {
+        "title": "Natural Language Processing Specialization",
+        "platform": "Coursera",
+        "instructor": "DeepLearning.AI",
+        "type": "course",
+        "level": "Advanced",
+        "free": false,
+        "audit_available": true,
+        "duration_hours": 60,
+        "link": "https://www.coursera.org/specializations/natural-language-processing",
+        "why_recommended": "Deep theoretical and practical coverage of NLP from attention to transformers."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_008",
+    "skill_name": "MLOps & Model Deployment",
+    "resources": [
+      {
+        "title": "MLOps Specialization",
+        "platform": "Coursera",
+        "instructor": "DeepLearning.AI",
+        "type": "course",
+        "level": "Advanced",
+        "free": false,
+        "audit_available": true,
+        "duration_hours": 45,
+        "link": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops",
+        "why_recommended": "Covers the full ML lifecycle: data, training, deployment, monitoring."
+      },
+      {
+        "title": "Made with ML - MLOps Course",
+        "platform": "madewithml.com",
+        "instructor": "Goku Mohandas",
+        "type": "course",
+        "level": "Advanced",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 40,
+        "link": "https://madewithml.com",
+        "why_recommended": "Extremely practical. Covers Git, Docker, FastAPI, testing, and CI/CD for ML."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_009",
+    "skill_name": "HTML & CSS",
+    "resources": [
+      {
+        "title": "The Odin Project - Foundations",
+        "platform": "theodinproject.com",
+        "instructor": "Open Source Community",
+        "type": "course",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 30,
+        "link": "https://www.theodinproject.com/paths/foundations/courses/foundations",
+        "why_recommended": "Best free full-stack curriculum. HTML/CSS section is thorough with real projects."
+      },
+      {
+        "title": "Responsive Web Design - freeCodeCamp",
+        "platform": "freeCodeCamp",
+        "instructor": "freeCodeCamp",
+        "type": "course + certification",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 300,
+        "link": "https://www.freecodecamp.org/learn/2022/responsive-web-design/",
+        "why_recommended": "Free certification. Project-based with 5 real projects to add to your portfolio."
+      },
+      {
+        "title": "CSS Grid & Flexbox for Responsive Layouts",
+        "platform": "Frontend Masters",
+        "instructor": "Jen Kramer",
+        "type": "course",
+        "level": "Beginner",
+        "free": false,
+        "audit_available": false,
+        "duration_hours": 6,
+        "link": "https://frontendmasters.com/courses/css-grid-flexbox-v2/",
+        "why_recommended": "Focused deep-dive into the two most important CSS layout tools."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_010",
+    "skill_name": "JavaScript Fundamentals",
+    "resources": [
+      {
+        "title": "JavaScript.info - The Modern JavaScript Tutorial",
+        "platform": "javascript.info",
+        "instructor": "Ilya Kantor",
+        "type": "book/tutorial",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 40,
+        "link": "https://javascript.info",
+        "why_recommended": "The single best JavaScript reference online. Clear, modern, and complete."
+      },
+      {
+        "title": "JavaScript Algorithms and Data Structures - freeCodeCamp",
+        "platform": "freeCodeCamp",
+        "instructor": "freeCodeCamp",
+        "type": "course + certification",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 300,
+        "link": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/",
+        "why_recommended": "Interactive and project-based. Excellent for building JS fundamentals."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_011",
+    "skill_name": "React.js",
+    "resources": [
+      {
+        "title": "React Official Documentation - Learn React",
+        "platform": "react.dev",
+        "instructor": "React Team",
+        "type": "documentation + tutorial",
+        "level": "Intermediate",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 20,
+        "link": "https://react.dev/learn",
+        "why_recommended": "The new official React docs are excellent. Interactive and covers hooks and modern patterns."
+      },
+      {
+        "title": "The Ultimate React Course",
+        "platform": "Udemy",
+        "instructor": "Jonas Schmedtmann",
+        "type": "course",
+        "level": "Intermediate",
+        "free": false,
+        "audit_available": false,
+        "duration_hours": 60,
+        "link": "https://www.udemy.com/course/the-ultimate-react-course/",
+        "why_recommended": "Most comprehensive React course. Covers hooks, routing, Redux, and React Query."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_012",
+    "skill_name": "TypeScript",
+    "resources": [
+      {
+        "title": "TypeScript Handbook",
+        "platform": "typescriptlang.org",
+        "instructor": "Microsoft",
+        "type": "documentation",
+        "level": "Intermediate",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 10,
+        "link": "https://www.typescriptlang.org/docs/handbook/intro.html",
+        "why_recommended": "Official reference. Best starting point for learning TypeScript concepts."
+      },
+      {
+        "title": "Total TypeScript",
+        "platform": "totaltypescript.com",
+        "instructor": "Matt Pocock",
+        "type": "course",
+        "level": "Intermediate",
+        "free": false,
+        "audit_available": true,
+        "duration_hours": 20,
+        "link": "https://www.totaltypescript.com",
+        "why_recommended": "Best TypeScript course for developers who want to go from basics to advanced patterns."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_013",
+    "skill_name": "Version Control with Git & GitHub",
+    "resources": [
+      {
+        "title": "Pro Git Book",
+        "platform": "git-scm.com",
+        "instructor": "Scott Chacon & Ben Straub",
+        "type": "book",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 15,
+        "link": "https://git-scm.com/book/en/v2",
+        "why_recommended": "The definitive Git reference. Free online and covers everything from basics to internals."
+      },
+      {
+        "title": "GitHub Skills",
+        "platform": "GitHub",
+        "instructor": "GitHub Team",
+        "type": "interactive exercises",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 5,
+        "link": "https://skills.github.com",
+        "why_recommended": "Hands-on GitHub learning directly in your own repos. Best for practical Git skills."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_015",
+    "skill_name": "Backend with Python & FastAPI",
+    "resources": [
+      {
+        "title": "FastAPI Official Documentation",
+        "platform": "fastapi.tiangolo.com",
+        "instructor": "Sebasti\u00e1n Ram\u00edrez (tiangolo)",
+        "type": "documentation + tutorial",
+        "level": "Intermediate",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 15,
+        "link": "https://fastapi.tiangolo.com/tutorial/",
+        "why_recommended": "Excellent official docs with a step-by-step tutorial. Best starting point for FastAPI."
+      },
+      {
+        "title": "Building Python Microservices with FastAPI",
+        "platform": "Packt / Udemy",
+        "instructor": "Various",
+        "type": "course",
+        "level": "Intermediate",
+        "free": false,
+        "audit_available": false,
+        "duration_hours": 20,
+        "link": "https://www.udemy.com/course/building-python-microservices-with-fastapi/",
+        "why_recommended": "Practical course building real microservices with FastAPI, databases, and Docker."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_016",
+    "skill_name": "Databases: SQL & NoSQL",
+    "resources": [
+      {
+        "title": "SQLBolt - Learn SQL",
+        "platform": "sqlbolt.com",
+        "instructor": "SQLBolt Team",
+        "type": "interactive tutorial",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 6,
+        "link": "https://sqlbolt.com",
+        "why_recommended": "Best interactive SQL tutorial. Learn by writing real queries immediately."
+      },
+      {
+        "title": "Databases and SQL for Data Science with Python",
+        "platform": "Coursera (IBM)",
+        "instructor": "IBM",
+        "type": "course",
+        "level": "Beginner",
+        "free": false,
+        "audit_available": true,
+        "duration_hours": 18,
+        "link": "https://www.coursera.org/learn/sql-data-science",
+        "why_recommended": "Covers SQL from basics to advanced queries with Python integration."
+      },
+      {
+        "title": "MongoDB University - M001: MongoDB Basics",
+        "platform": "MongoDB University",
+        "instructor": "MongoDB Team",
+        "type": "course",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 12,
+        "link": "https://learn.mongodb.com/learning-paths/introduction-to-mongodb",
+        "why_recommended": "Official free course from MongoDB. Best way to learn NoSQL concepts and MongoDB."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_019",
+    "skill_name": "Linux & Command Line",
+    "resources": [
+      {
+        "title": "The Linux Command Line",
+        "platform": "Book / linuxcommand.org",
+        "instructor": "William Shotts",
+        "type": "book",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 20,
+        "link": "https://linuxcommand.org/tlcl.php",
+        "why_recommended": "The best free book on Linux command line. Thorough and beginner-friendly."
+      },
+      {
+        "title": "Linux Basics for Hackers",
+        "platform": "Book (No Starch Press)",
+        "instructor": "OccupyTheWeb",
+        "type": "book",
+        "level": "Beginner",
+        "free": false,
+        "audit_available": false,
+        "duration_hours": 20,
+        "link": "https://nostarch.com/linuxbasicsforhackers",
+        "why_recommended": "Perfect for security-focused learners. Practical Linux skills with a security mindset."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_020",
+    "skill_name": "Docker & Containerization",
+    "resources": [
+      {
+        "title": "Docker Official Get Started Tutorial",
+        "platform": "docs.docker.com",
+        "instructor": "Docker Team",
+        "type": "documentation + tutorial",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 5,
+        "link": "https://docs.docker.com/get-started/",
+        "why_recommended": "Start here. Official, hands-on, and covers all Docker fundamentals."
+      },
+      {
+        "title": "Docker & Kubernetes: The Practical Guide",
+        "platform": "Udemy",
+        "instructor": "Maximilian Schwarzm\u00fcller",
+        "type": "course",
+        "level": "Intermediate",
+        "free": false,
+        "audit_available": false,
+        "duration_hours": 24,
+        "link": "https://www.udemy.com/course/docker-kubernetes-the-practical-guide/",
+        "why_recommended": "Most popular Docker course on Udemy. Goes from basics to Kubernetes."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_022",
+    "skill_name": "Cloud Platforms (AWS / GCP / Azure)",
+    "resources": [
+      {
+        "title": "AWS Cloud Practitioner Essentials",
+        "platform": "AWS Skill Builder",
+        "instructor": "AWS Team",
+        "type": "course",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 6,
+        "link": "https://aws.amazon.com/training/digital/aws-cloud-practitioner-essentials/",
+        "why_recommended": "Official AWS course for beginners. Prepares you for the AWS CCP certification."
+      },
+      {
+        "title": "AWS Certified Solutions Architect - Udemy",
+        "platform": "Udemy",
+        "instructor": "Stephane Maarek",
+        "type": "course",
+        "level": "Intermediate",
+        "free": false,
+        "audit_available": false,
+        "duration_hours": 27,
+        "link": "https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/",
+        "why_recommended": "The highest-rated AWS exam prep course. Practical with hands-on labs."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_024",
+    "skill_name": "Kotlin for Android",
+    "resources": [
+      {
+        "title": "Android Basics with Compose",
+        "platform": "Google / developer.android.com",
+        "instructor": "Google Team",
+        "type": "course",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 40,
+        "link": "https://developer.android.com/courses/android-basics-compose/course",
+        "why_recommended": "Official Google course. Teaches Kotlin + Compose together. Best starting point."
+      },
+      {
+        "title": "Kotlin Bootcamp for Programmers",
+        "platform": "Udacity / Google",
+        "instructor": "Google Team",
+        "type": "course",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 10,
+        "link": "https://www.udacity.com/course/kotlin-bootcamp-for-programmers--ud9011",
+        "why_recommended": "Great quick Kotlin course specifically for developers coming from another language."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_029",
+    "skill_name": "Networking Fundamentals",
+    "resources": [
+      {
+        "title": "Computer Networking: A Top-Down Approach",
+        "platform": "Book",
+        "instructor": "Kurose & Ross",
+        "type": "book",
+        "level": "Beginner",
+        "free": false,
+        "audit_available": false,
+        "duration_hours": 40,
+        "link": "https://gaia.cs.umass.edu/kurose_ross/index.php",
+        "why_recommended": "The classic networking textbook. Thorough and well-structured for beginners."
+      },
+      {
+        "title": "Professor Messer's CompTIA Network+ Course",
+        "platform": "professormesser.com",
+        "instructor": "Professor Messer",
+        "type": "video course",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 25,
+        "link": "https://www.professormesser.com/network-plus/n10-008/n10-008-video/n10-008-training-course/",
+        "why_recommended": "Free and comprehensive. Covers everything for the Network+ cert and real-world networking."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_030",
+    "skill_name": "Ethical Hacking & Penetration Testing",
+    "resources": [
+      {
+        "title": "The Complete Ethical Hacking Course",
+        "platform": "Udemy",
+        "instructor": "Joseph Delgadillo",
+        "type": "course",
+        "level": "Intermediate",
+        "free": false,
+        "audit_available": false,
+        "duration_hours": 20,
+        "link": "https://www.udemy.com/course/ethical-hacking/",
+        "why_recommended": "Practical and beginner-friendly. Covers Kali Linux, Metasploit, and web hacking."
+      },
+      {
+        "title": "TryHackMe - Learning Paths",
+        "platform": "tryhackme.com",
+        "instructor": "TryHackMe Team",
+        "type": "interactive platform",
+        "level": "Beginner to Intermediate",
+        "free": false,
+        "audit_available": true,
+        "duration_hours": 100,
+        "link": "https://tryhackme.com/paths",
+        "why_recommended": "Best hands-on platform for learning hacking. Guided rooms with real machines."
+      },
+      {
+        "title": "HackTheBox - Starting Point",
+        "platform": "hackthebox.com",
+        "instructor": "HTB Team",
+        "type": "interactive platform",
+        "level": "Intermediate",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 50,
+        "link": "https://www.hackthebox.com/starting-point",
+        "why_recommended": "Industry-standard platform for practicing real penetration testing skills."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_031",
+    "skill_name": "Web Application Security",
+    "resources": [
+      {
+        "title": "OWASP WebGoat",
+        "platform": "owasp.org",
+        "instructor": "OWASP Community",
+        "type": "practice application",
+        "level": "Intermediate",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 20,
+        "link": "https://owasp.org/www-project-webgoat/",
+        "why_recommended": "Official OWASP vulnerable app for practicing web security. Learn by exploiting."
+      },
+      {
+        "title": "PortSwigger Web Security Academy",
+        "platform": "portswigger.net",
+        "instructor": "PortSwigger Team",
+        "type": "course + labs",
+        "level": "Intermediate",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 80,
+        "link": "https://portswigger.net/web-security",
+        "why_recommended": "The best free web security training. Burp Suite creators made this. Covers all OWASP vulns with labs."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_032",
+    "skill_name": "Cryptography & PKI",
+    "resources": [
+      {
+        "title": "Cryptography I - Stanford",
+        "platform": "Coursera",
+        "instructor": "Dan Boneh (Stanford)",
+        "type": "course",
+        "level": "Intermediate",
+        "free": false,
+        "audit_available": true,
+        "duration_hours": 23,
+        "link": "https://www.coursera.org/learn/crypto",
+        "why_recommended": "The best theoretical cryptography course. Dan Boneh is the top expert in the field."
+      },
+      {
+        "title": "Cryptohack",
+        "platform": "cryptohack.org",
+        "instructor": "CryptoHack Team",
+        "type": "CTF-style challenges",
+        "level": "Intermediate",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 30,
+        "link": "https://cryptohack.org",
+        "why_recommended": "Learn cryptography by breaking it. CTF-style challenges that make theory practical."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_014",
+    "skill_name": "Frontend Performance & Testing",
+    "resources": [
+      {
+        "title": "Web Performance Fundamentals",
+        "platform": "Frontend Masters",
+        "instructor": "Todd Gardner",
+        "type": "course",
+        "level": "Intermediate",
+        "free": false,
+        "audit_available": false,
+        "duration_hours": 5,
+        "link": "https://frontendmasters.com/courses/web-perf/",
+        "why_recommended": "Focused course on Core Web Vitals, Lighthouse, and real performance optimization techniques."
+      },
+      {
+        "title": "Testing JavaScript with Kent C. Dodds",
+        "platform": "testingjavascript.com",
+        "instructor": "Kent C. Dodds",
+        "type": "course",
+        "level": "Intermediate",
+        "free": false,
+        "audit_available": false,
+        "duration_hours": 20,
+        "link": "https://testingjavascript.com",
+        "why_recommended": "The definitive JavaScript testing course. Covers Jest, React Testing Library, and Cypress end-to-end."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_017",
+    "skill_name": "Authentication & Security Basics",
+    "resources": [
+      {
+        "title": "OAuth 2.0 and OpenID Connect In Plain English",
+        "platform": "YouTube (OktaDev)",
+        "instructor": "Nate Barbettini",
+        "type": "video",
+        "level": "Intermediate",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 1,
+        "link": "https://www.youtube.com/watch?v=996OiexHze0",
+        "why_recommended": "Best single video explanation of OAuth2 and OIDC. Clear and practical."
+      },
+      {
+        "title": "JWT.io Introduction",
+        "platform": "jwt.io",
+        "instructor": "Auth0 Team",
+        "type": "documentation",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 2,
+        "link": "https://jwt.io/introduction",
+        "why_recommended": "Official JWT reference. Understand the structure, signing, and validation of JWTs."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_018",
+    "skill_name": "System Design",
+    "resources": [
+      {
+        "title": "System Design Primer",
+        "platform": "GitHub",
+        "instructor": "Donne Martin",
+        "type": "open-source guide",
+        "level": "Intermediate",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 30,
+        "link": "https://github.com/donnemartin/system-design-primer",
+        "why_recommended": "Most starred system design resource on GitHub. Covers every major concept with diagrams."
+      },
+      {
+        "title": "Designing Data-Intensive Applications",
+        "platform": "Book (OReilly)",
+        "instructor": "Martin Kleppmann",
+        "type": "book",
+        "level": "Advanced",
+        "free": false,
+        "audit_available": false,
+        "duration_hours": 50,
+        "link": "https://dataintensive.net",
+        "why_recommended": "The bible of distributed systems. Required reading for any senior backend or infrastructure role."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_021",
+    "skill_name": "CI/CD Pipelines",
+    "resources": [
+      {
+        "title": "GitHub Actions Documentation",
+        "platform": "GitHub Docs",
+        "instructor": "GitHub Team",
+        "type": "documentation",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 8,
+        "link": "https://docs.github.com/en/actions",
+        "why_recommended": "Official docs with quickstart examples. Best way to learn GitHub Actions hands-on."
+      },
+      {
+        "title": "DevOps with GitHub Actions - Udemy",
+        "platform": "Udemy",
+        "instructor": "Brian Douglas",
+        "type": "course",
+        "level": "Intermediate",
+        "free": false,
+        "audit_available": false,
+        "duration_hours": 12,
+        "link": "https://www.udemy.com/course/github-actions-the-complete-guide/",
+        "why_recommended": "Comprehensive course covering full CI/CD pipelines with GitHub Actions from scratch."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_023",
+    "skill_name": "Infrastructure as Code (Terraform)",
+    "resources": [
+      {
+        "title": "Terraform Official Learn Tutorials",
+        "platform": "developer.hashicorp.com",
+        "instructor": "HashiCorp Team",
+        "type": "documentation + labs",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 15,
+        "link": "https://developer.hashicorp.com/terraform/tutorials",
+        "why_recommended": "Official interactive tutorials. Spin up real infrastructure while learning Terraform syntax."
+      },
+      {
+        "title": "Terraform: From Beginner to Master",
+        "platform": "Udemy",
+        "instructor": "Edward Viaene",
+        "type": "course",
+        "level": "Intermediate",
+        "free": false,
+        "audit_available": false,
+        "duration_hours": 18,
+        "link": "https://www.udemy.com/course/learn-devops-infrastructure-automation-with-terraform/",
+        "why_recommended": "Practical Terraform course covering AWS provisioning, modules, state management, and best practices."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_025",
+    "skill_name": "Android UI with Jetpack Compose",
+    "resources": [
+      {
+        "title": "Jetpack Compose Basics Codelab",
+        "platform": "developer.android.com",
+        "instructor": "Google Team",
+        "type": "codelab",
+        "level": "Intermediate",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 4,
+        "link": "https://developer.android.com/codelabs/jetpack-compose-basics",
+        "why_recommended": "Official Google codelab. Hands-on and covers the core Compose concepts step by step."
+      },
+      {
+        "title": "Jetpack Compose - Android Development Masterclass",
+        "platform": "Udemy",
+        "instructor": "Denis Panjuta",
+        "type": "course",
+        "level": "Intermediate",
+        "free": false,
+        "audit_available": false,
+        "duration_hours": 30,
+        "link": "https://www.udemy.com/course/jetpack-compose-masterclass/",
+        "why_recommended": "Most comprehensive Compose course. Covers animations, navigation, theming, and real app projects."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_026",
+    "skill_name": "Android Architecture (MVVM)",
+    "resources": [
+      {
+        "title": "Guide to App Architecture - Android Docs",
+        "platform": "developer.android.com",
+        "instructor": "Google Team",
+        "type": "documentation",
+        "level": "Intermediate",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 5,
+        "link": "https://developer.android.com/topic/architecture",
+        "why_recommended": "Official architecture guide from Google. Defines the recommended patterns for Android apps."
+      },
+      {
+        "title": "Android Architecture Components - Udacity",
+        "platform": "Udacity",
+        "instructor": "Google Team",
+        "type": "course",
+        "level": "Intermediate",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 12,
+        "link": "https://www.udacity.com/course/developing-android-apps-with-kotlin--ud9012",
+        "why_recommended": "Official Google course covering ViewModel, LiveData, Room, and Navigation Component."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_027",
+    "skill_name": "Networking & APIs in Android",
+    "resources": [
+      {
+        "title": "Retrofit Documentation",
+        "platform": "square.github.io",
+        "instructor": "Square",
+        "type": "documentation",
+        "level": "Intermediate",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 3,
+        "link": "https://square.github.io/retrofit/",
+        "why_recommended": "Official Retrofit docs. Concise and covers all you need to start consuming APIs."
+      },
+      {
+        "title": "Android Networking with Kotlin - YouTube Series",
+        "platform": "YouTube (Philipp Lackner)",
+        "instructor": "Philipp Lackner",
+        "type": "video series",
+        "level": "Intermediate",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 6,
+        "link": "https://www.youtube.com/@PhilippLackner",
+        "why_recommended": "Best free Android tutorials on YouTube. Covers Retrofit, Coroutines, and clean architecture together."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_028",
+    "skill_name": "Publishing & Google Play",
+    "resources": [
+      {
+        "title": "Publish Your App - Android Documentation",
+        "platform": "developer.android.com",
+        "instructor": "Google Team",
+        "type": "documentation",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 2,
+        "link": "https://developer.android.com/studio/publish",
+        "why_recommended": "Official step-by-step guide for preparing and publishing your Android app."
+      },
+      {
+        "title": "Google Play Console Help",
+        "platform": "Google",
+        "instructor": "Google Team",
+        "type": "documentation",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 2,
+        "link": "https://support.google.com/googleplay/android-developer",
+        "why_recommended": "Official Play Console docs. Covers listings, ratings, policies, and in-app billing."
+      }
+    ]
+  },
+  {
+    "skill_id": "sk_033",
+    "skill_name": "Security Operations & Incident Response",
+    "resources": [
+      {
+        "title": "Splunk Fundamentals 1",
+        "platform": "Splunk Training",
+        "instructor": "Splunk Team",
+        "type": "course",
+        "level": "Beginner",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 9,
+        "link": "https://www.splunk.com/en_us/training/free-courses/splunk-fundamentals-1.html",
+        "why_recommended": "Free official Splunk course. Learn to search, analyze, and visualize machine data \u2014 the core of SIEM work."
+      },
+      {
+        "title": "Blue Team Labs Online",
+        "platform": "blueteamlabs.online",
+        "instructor": "BTLO Team",
+        "type": "interactive platform",
+        "level": "Intermediate",
+        "free": true,
+        "audit_available": true,
+        "duration_hours": 50,
+        "link": "https://blueteamlabs.online",
+        "why_recommended": "Hands-on SOC and incident response scenarios. Practice log analysis, threat hunting, and DFIR."
+      }
+    ]
+  }
+]
