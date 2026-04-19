@@ -21,36 +21,40 @@ RoadmapRAG is a **Retrieval-Augmented Generation (RAG)** system that takes a use
 
 ## 🏗️ Project Structure
 
-```text
+\`\`\`
 roadmap-rag/
-├── data/                         # 📦 Knowledge base (JSON files)
-│   ├── skills.json               #    33 skills across 6 tracks
-│   ├── roadmaps.json             #    6 learning tracks with ordered steps
-│   └── resources.json            #    72 curated courses & resources
-├── pipeline/                     # 🧠 RAG pipeline
-│   ├── ingest.py                 #    Load data → embed → store in ChromaDB
-│   ├── retriever.py              #    Semantic search over vector store
-│   └── generator.py              #    Build prompt → call LLM → return roadmap
+│
+├── data/                        # 📦 Knowledge base (JSON files)
+│   ├── skills.json              #   33 skills across 6 tracks
+│   ├── roadmaps.json            #   6 learning tracks with ordered steps
+│   └── resources.json           #   72 curated courses & resources
+│
+├── pipeline/                    # 🧠 RAG pipeline
+│   ├── ingest.py                #   Load data → embed → store in ChromaDB
+│   ├── retriever.py             #   Semantic search over vector store
+│   └── generator.py             #   Build prompt → call LLM → return roadmap
+│
 ├── app/
-│   └── main.py                   # 🖥️ Streamlit UI
+│   └── main.py                  # 🖥️ Streamlit UI
+│
 ├── tests/
-│   └── test_pipeline.py          # ✅ Unit tests
+│   └── test_pipeline.py         # ✅ Unit tests
+│
 ├── notebooks/
 │   ├── 01_data_exploration.ipynb
 │   └── 02_embeddings_demo.ipynb
-├── validate_data.py              # 🔍 Data integrity checker
-├── .env.example                  # Environment variables template
+│
+├── validate_data.py             # 🔍 Data integrity checker
+├── .env.example                 # Environment variables template
 ├── requirements.txt
 └── README.md
-
-
-
+\`\`\`
 
 ---
 
 ## ⚙️ How It Works
 
-
+\`\`\`
 User Input
     │
     ▼
@@ -67,7 +71,7 @@ User Input
     │
     ▼
 Personalized Roadmap ✅
-
+\`\`\`
 
 ---
 
