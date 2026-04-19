@@ -126,10 +126,10 @@ streamlit run app/main.py
 - [x] Design data schema
 - [x] Build knowledge base (skills + roadmaps + resources)
 - [x] Data validation script
-- [ ] `ingest.py` — embed and store in ChromaDB
-- [ ] `retriever.py` — semantic search
-- [ ] `generator.py` — prompt builder + LLM call
-- [ ] `app/main.py` — Streamlit UI
+- [x] `ingest.py` — embed and store in ChromaDB
+- [x] `retriever.py` — semantic search
+- [x] `generator.py` — prompt builder + LLM call
+- [x] `app/main.py` — Streamlit UI
 
 ---
 
