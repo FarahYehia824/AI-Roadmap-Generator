@@ -31,7 +31,7 @@ html, body, .stApp {
     color: var(--text) !important;
     font-family: 'Outfit', sans-serif !important;
     background-image:
-        linear-gradient(135deg, rgba(13,17,23,0.65), rgba(19,26,46,0.72)),
+        linear-gradient(135deg, rgba(13,17,23,0.92), rgba(19,26,46,0.95)),
         url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1920&q=80') !important;
     background-size: cover !important;
     background-position: center !important;
@@ -160,23 +160,23 @@ html, body, .stApp {
 .level-card {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 10px;
     background: rgba(15,23,42,0.5);
     border: 1px solid rgba(96,165,250,0.15);
     border-radius: 12px;
     padding: 0.85rem 1.1rem;
-    margin-bottom: 1.3rem;
+    margin-bottom: 0.5rem;
 }
-.level-card-left { display: flex; align-items: center; gap: 10px; }
 .level-card-icon {
     width: 34px; height: 34px;
     border-radius: 8px;
     background: rgba(96,165,250,0.12);
     display: flex; align-items: center; justify-content: center;
     font-size: 15px;
+    flex-shrink: 0;
 }
 .level-card-text p { font-size: 0.88rem; font-weight: 500; color: #e2e8f0; margin: 0 0 2px; }
-.level-card-text small { font-size: 0.74rem; color: rgba(148,163,184,0.7); }
+.level-card-sub { font-size: 0.74rem; color: rgba(148,163,184,0.7); }
 
 /* ── Toggle ── */
 .stToggle label {
@@ -232,11 +232,13 @@ html, body, .stApp {
 
 /* ── Output card ── */
 .output-wrapper {
-    background: rgba(13,17,23,0.85);
-    border: 1px solid rgba(96,165,250,0.15);
+    background: rgba(10,14,25,0.92);
+    border: 1px solid rgba(96,165,250,0.25);
     border-radius: 14px;
     padding: 2rem;
     margin-top: 1.2rem;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 .output-wrapper h1, .output-wrapper h2, .output-wrapper h3 {
     font-family: 'Playfair Display', serif !important;
@@ -282,10 +284,12 @@ html, body, .stApp {
 # ── Pipeline loader ───────────────────────────────────────────────────────────
 @st.cache_resource(show_spinner="Setting up your planner...")
 def load_pipeline():
+    import shutil
     from pathlib import Path
-    if not Path("faiss_store").exists():
-        from pipeline.ingest import main as ingest
-        ingest()
+    if Path("chroma_db").exists():
+        shutil.rmtree("chroma_db")
+    from pipeline.ingest import main as ingest
+    ingest()
     from pipeline.generator import RoadmapPipeline
     return RoadmapPipeline()
 
@@ -305,7 +309,7 @@ st.markdown(f'<div class="tracks">{pills}</div>', unsafe_allow_html=True)
 st.markdown('<hr class="divider">', unsafe_allow_html=True)
 
 # ── Input ─────────────────────────────────────────────────────────────────────
-st.markdown('<div class="section-label"> What do you want to learn?</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-label">📝 What do you want to learn?</div>', unsafe_allow_html=True)
 
 query = st.text_area(
     label="goal",
@@ -326,25 +330,21 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ── Level ─────────────────────────────────────────────────────────────────────
-st.markdown('<div class="section-label"> Experience Level</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-label">🎯 Experience Level</div>', unsafe_allow_html=True)
 
-st.markdown("""
-<div class="level-card">
-    <div class="level-card-left">
-        <div class="level-card-icon"></div>
+col_text, col_toggle = st.columns([5, 1])
+with col_text:
+    st.markdown("""
+    <div class="level-card">
+        <div class="level-card-icon">🤖</div>
         <div class="level-card-text">
-            <p>Auto-detect from my Description</p>
-            
+            <p>Auto-detect from my description</p>
+            <span class="level-card-sub">Claude will figure out your level automatically</span>
         </div>
     </div>
-</div>
-""", unsafe_allow_html=True)
-
-left, right = st.columns([5, 1])
-with right:
-    auto_detect = st.toggle(" ", value=True)
-with left:
-    st.markdown('<p style="color:rgba(220,230,255,0.75); font-size:0.88rem; margin-top:0.3rem;">Enable auto-detection</p>', unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
+with col_toggle:
+    auto_detect = st.toggle(" ", value=True, label_visibility="collapsed")
 
 if not auto_detect:
     level_choice = st.selectbox(
@@ -379,10 +379,10 @@ if generate_btn:
     if auto_detect:
         with st.spinner("Understanding your level..."):
             level = detect_level(query, client)
-        st.info(f" Detected level: **{level}**")
+        st.info(f"🤖 Detected level: **{level}**")
     else:
         level = level_choice
-        st.info(f" Level: **{level}**")
+        st.info(f"📌 Level: **{level}**")
 
     st.markdown('<div class="output-wrapper">', unsafe_allow_html=True)
     placeholder = st.empty()
