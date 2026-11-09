@@ -377,7 +377,7 @@ if generate_btn:
     full_text   = ""
 
     stream = client.chat.completions.create(
-        model=os.getenv("LLM_MODEL", "llama-3.3-70b-versatile"),
+        model=os.getenv("LLM_MODEL", "openai/gpt-oss-120b"),
         messages=[
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user",   "content": build_user_prompt(query, context, level)},
